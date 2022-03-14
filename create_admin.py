@@ -1,8 +1,8 @@
 from getpass import getpass
 import sys
 
-from webapp import create_app
-from webapp.model import db, User
+from webapp import create_app, db
+from webapp.model import User
 
 app = create_app()
 
