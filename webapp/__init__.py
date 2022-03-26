@@ -1,4 +1,4 @@
 from webapp.app import create_app
-from webapp.model import db
+from webapp.db import db
 
 __all__ = ['create_app', 'db']
