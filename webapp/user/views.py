@@ -63,6 +63,11 @@ def process_reg():
         db.session.commit()
         flash('Registration coplete')
         return redirect(url_for('user.login'))
-    flash('Please correct data in form')
-    return redirect(url_for('user.register'))
-    
+    else:
+        for field, errors in form.errors.items():            
+            for error in errors:
+                flash('Error in field {field_name}: {error_text}'.format(
+                    field_name=getattr(form, field).label.text,
+                    error_text=error,
+                ))    
+        return redirect(url_for('user.register'))
