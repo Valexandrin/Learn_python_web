@@ -9,7 +9,7 @@
             "type": "python",
             "request": "launch",
             "module": "webapp",            
-            "console": "internalConsole",            
+            "console": "internalConsole",
         },
         {
             "name": "create_db",
